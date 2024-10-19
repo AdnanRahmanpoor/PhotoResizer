@@ -34,8 +34,13 @@ namespace PhotoResizer
         {
             if (originalImage != null)
             {
+
+                // User input for the size
+                int width = int.Parse(txtWidth.Text);
+                int height = int.Parse(txtHeight.Text);
+
                 // Resize
-                Image resizedImage = ResizeImage(originalImage, 1000, 1000);
+                Image resizedImage = ResizeImage(originalImage, width, height);
 
                 // Save 
                 SaveFileDialog saveFileDialog = new SaveFileDialog
